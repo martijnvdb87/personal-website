@@ -78,10 +78,10 @@ const findStartOfLastWeekDay = (day: string, currentDay: DateTime | null = null)
   if (day === 'daily') {
     return currentDay
 
-  } else if (day === 'weekend') {
+  } else if (day === 'weekend' ) {
     let foundDay = currentDay
     while (true) {
-      if (['Sat', 'Sun'].includes(foundDay.weekdayShort)) {
+      if (['Sat', 'Sun'].includes(foundDay.weekdayShort ?? '')) {
         return foundDay
       }
       foundDay = foundDay.minus({ day: 1 })
@@ -90,7 +90,7 @@ const findStartOfLastWeekDay = (day: string, currentDay: DateTime | null = null)
   } else if (day === 'workday') {
     let foundDay = currentDay
     while (true) {
-      if (!['Sat', 'Sun'].includes(foundDay.weekdayShort)) {
+      if (!['Sat', 'Sun'].includes(foundDay.weekdayShort ?? '')) {
         return foundDay
       }
       foundDay = foundDay.minus({ day: 1 })
@@ -117,8 +117,8 @@ const findStartOfLastWeekDay = (day: string, currentDay: DateTime | null = null)
     let foundDay = currentDay
     while (true) {
       if (
-        day.toLowerCase() === foundDay.weekdayShort.toLowerCase() ||
-        day.toLowerCase() === foundDay.weekdayLong.toLowerCase()
+        day.toLowerCase() === (foundDay.weekdayShort ?? '').toLowerCase() ||
+        day.toLowerCase() === (foundDay.weekdayLong ?? '').toLowerCase()
       ) {
         return foundDay
       }
