@@ -2,6 +2,7 @@
 import profilePicture from '@/assets/images/profile-picture.jpg';
 import Status from '@/components/Status.vue';
 import DownloadResume from '@/components/DownloadResume.vue';
+import Link from './Link.vue';
 
 const props = withDefaults(defineProps<{
   status?: boolean
@@ -19,7 +20,11 @@ const props = withDefaults(defineProps<{
     </figure>
     <header>
       <h1>Martijn van den Bosch</h1>
-      <p>Senior full-stack developer</p>
+      <p>Senior full-stack developer
+      </p>
+      <div class="location">
+        <Link href="https://www.google.com/maps/place/Deurne" target="_blank" variant="clean" size="small">Deurne, The Netherlands</Link>
+      </div>
       <DownloadResume />
     </header>
   </div>
@@ -77,6 +82,10 @@ const props = withDefaults(defineProps<{
       font-weight: 350;
       font-size: 1.0625rem;
     }
+  }
+
+  .location {
+    margin-top: 0.5rem;
   }
 }
 </style>

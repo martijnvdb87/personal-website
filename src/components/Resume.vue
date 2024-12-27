@@ -56,16 +56,14 @@ const updateResumeContentScale = (): void => {
           <QrCode />
           <Info />
           <hr>
-          <h3>Introduction</h3>
           <Introduction />
           <hr>
-          <h3>Work</h3>
+          <h3>Work experience</h3>
           <Work />
           <hr>
           <h3>Education</h3>
           <Education />
           <hr>
-          <h3>Skills</h3>
           <Skills show-all />
         </div>
       </div>

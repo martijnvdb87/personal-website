@@ -7,9 +7,11 @@ const props = withDefaults(defineProps<{
   href: string,
   target?: string,
   variant?: string,
+  size?: string,
 }>(), {
   target: '',
   variant: 'default',
+  size: 'default',
 });
 
 const isInternalLink = computed(() => {
@@ -19,18 +21,18 @@ const isInternalLink = computed(() => {
 </script>
 
 <template>  
-  <router-link v-if="isInternalLink" :to="props.href" :class="['link', `link--variant-${props.variant}`]">
+  <router-link v-if="isInternalLink" :to="props.href" :class="['link', `link--variant-${props.variant} link--size-${props.size}`]">
     <span class="link__text">
       <slot></slot>
     </span>
     <Icon v-if="props.target === '_blank'" type="external-link" class="link__icon"></Icon>
   </router-link>
 
-  <a v-else :href="props.href" :target="props.target" :class="['link', `link--variant-${props.variant}`]">
+  <a v-else :href="props.href" :target="props.target" :class="['link', `link--variant-${props.variant} link--size-${props.size}`]">
     <span class="link__text">
       <slot></slot>
     </span>
-    <Icon v-if="props.target === '_blank'" type="external-link" class="link__icon"></Icon>
+    <Icon v-if="props.target === '_blank' && props.variant !== 'clean'" type="external-link" class="link__icon"></Icon>
   </a>
 </template>
 
@@ -81,5 +83,21 @@ const isInternalLink = computed(() => {
   &:hover {
     color: var(--blue-500);
   }
+}
+
+.link.link--variant-clean {
+  text-decoration-thickness: 0.0625rem;
+  color: var(--gray-650);
+
+  &:hover {
+    color: var(--blue-500);
+  }
+}
+
+.link.link--size-small {
+  font-size: 0.925rem;
+  text-decoration: none;
+  color: var(--gray-550);
+  font-weight: 350;
 }
 </style>

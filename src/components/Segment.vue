@@ -34,6 +34,7 @@ const props = withDefaults(defineProps<{
 
 <style scoped lang="scss">
 .segment {
+  break-inside: avoid-column;
   margin-bottom: 4rem;
 }
 
