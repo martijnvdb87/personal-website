@@ -6,7 +6,7 @@ import Link from '@/components/Link.vue';
 <template>
   <div class="info">
     <Segment format="small" title="Location" icon="map-pin">
-      <Link href="https://www.google.com/maps/place/Helmond" target="_blank" variant="simple">Helmond, The Netherlands</Link>
+      <Link href="https://www.google.com/maps/place/Deurne" target="_blank" variant="simple">Deurne, The Netherlands</Link>
     </Segment>
     <Segment format="small" title="Website" icon="link">
       <Link href="https://martijnvandenbosch.com" target="_blank" variant="simple">https://martijnvandenbosch.com</Link>
