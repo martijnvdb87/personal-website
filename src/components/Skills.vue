@@ -1,45 +1,15 @@
 <script setup lang="ts">
 import Label from '@/components/Label.vue';
+import { Skill } from '@/enums/skill';
 
 const props = withDefaults(defineProps<{
   showAll?: boolean,
-  labels?: string[]
+  labels?: Skill[]
 }>(), {
   labels: () => []
 });
 
-const labels = [
-  'PHP',
-  'Laravel',
-  'Javascript',
-  'Typescript',
-  'React',
-  'Vue',
-  'Svelte',
-  'Web Components',
-  'SQL',
-  'PostgreSQL',
-  'MySQL',
-  'MongoDB',
-  'Redis',
-  'Memcached',
-  'C# .NET',
-  'HTML',
-  'CSS',
-  'SEO',
-  'UI/UX',
-  'Git',
-  'REST API',
-  'SOAP',
-  'OpenID Connect',
-  'SAML',
-  'OAuth',
-  'Wordpress',
-  'Moodle',
-  'Docker',
-  'CI/CD',
-  'FHIR',
-];
+const labels = Object.values(Skill);
 
 const validLabel = (label: string): boolean => {
   return props.labels.map(label => label.toLowerCase()).includes(label.toLowerCase());

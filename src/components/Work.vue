@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import Segment from '@/components/Segment.vue';
 import Link from '@/components/Link.vue';
-import Skills from '@/components/Skills.vue';
 import SegmentLead from './SegmentLead.vue';
+import { Skill } from '@/enums/skill';
 </script>
 
 <template>
@@ -18,7 +18,7 @@ import SegmentLead from './SegmentLead.vue';
               <li><SegmentLead>Medical services</SegmentLead> Succesfully developed and maintained medical services with tight deadlines</li>
               <li><SegmentLead>Testing</SegmentLead> Added a testing utility function to create dummy users with specific permissions to simplify writing unit and integration tests</li>
             </ul>
-            <Skills :labels="['Javascript', 'Typescript', 'SQL', 'PostgreSQL', 'HTML', 'CSS', 'React', 'REST API', 'SAML', 'Git', 'FHIR']" />
+            <Skills :labels="[Skill.Javascript, Skill.Typescript, Skill.Sql, Skill.PostgreSQL, Skill.Html, Skill.Css, Skill.React, Skill.RestApi, Skill.Saml, Skill.Git, Skill.Fhir]" />
           </Segment>
           <Segment title="SkillsTown" subtitle="March 2019 - September 2022 | Lead full-stack developer" href="https://skillstown.com/" target="_blank">
             <ul>
@@ -31,7 +31,7 @@ import SegmentLead from './SegmentLead.vue';
               <li><SegmentLead>LRS</SegmentLead> Implemented full <Link href="https://en.wikipedia.org/wiki/Learning_Record_Store" target="_blank">LRS</Link> capability in two existing platforms (PHP & C# .NET)</li>
               <li><SegmentLead>WooCommerce</SegmentLead> Automated the ordering process between the learning platform and the <Link href="https://woocommerce.com/" target="_blank">WooCommerce</Link> webshop</li>
             </ul>
-            <Skills :labels="['PHP', 'Javascript', 'Typescript', 'C# .NET', 'SQL', 'MySQL', 'MongoDB', 'HTML', 'CSS', 'Laravel', 'React', 'Vue', 'Svelte', 'REST API', 'Git', 'OpenID Connect', 'SAML', 'OAuth', 'Wordpress', 'Moodle']" />
+            <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Typescript, Skill.CSharpDorNet, Skill.Sql, Skill.MySQL, Skill.MongoDB, Skill.Html, Skill.Css, Skill.Laravel, Skill.React, Skill.Vue, Skill.Svelte, Skill.RestApi, Skill.Git, Skill.OpenIdConnect, Skill.Saml, Skill.OAuth, Skill.Wordpress, Skill.Moodle]" />
           </Segment>
           <Segment title="Monversa Web Development" subtitle="July 2013 - February 2019 | Owner & full-stack developer" href="https://web.archive.org/web/20180831062310/https://monversa.nl/" target="_blank">
             <ul>
@@ -40,7 +40,7 @@ import SegmentLead from './SegmentLead.vue';
               <li><SegmentLead>Wordpress</SegmentLead> Built multiple Wordpress sites for small local businesses</li>
               <li><SegmentLead>Plugins</SegmentLead> Created several custom Wordpress webshop plugins</li>
             </ul>
-            <Skills :labels="['PHP', 'Javascript', 'SQL', 'MySQL', 'HTML', 'CSS', 'UI/UX', 'REST API', 'Git', 'Wordpress']" />
+            <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Sql, Skill.MySQL, Skill.Html, Skill.Css, Skill.UiUx, Skill.RestApi, Skill.Git, Skill.Wordpress]" />
           </Segment>
           <Segment title="Innowijs" subtitle="June 2018 - December 2018 (part-time) | Full-stack developer" href="https://innowijs.nl/" target="_blank">
             <ul>
@@ -50,7 +50,7 @@ import SegmentLead from './SegmentLead.vue';
               <li><SegmentLead>Library plugin</SegmentLead> Created a custom online libary Wordpress plugin</li>
               <li><SegmentLead>Charity site</SegmentLead> Built a Wordpress site for a charity organisation</li>
             </ul>
-            <Skills :labels="['PHP', 'Javascript', 'SQL', 'MySQL', 'HTML', 'CSS', 'UI/UX', 'REST API', 'Wordpress', 'Moodle']" />
+            <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Sql, Skill.MySQL, Skill.Html, Skill.Css, Skill.UiUx, Skill.RestApi, Skill.Wordpress, Skill.Moodle]" />
           </Segment>
         </div>
       </section>
