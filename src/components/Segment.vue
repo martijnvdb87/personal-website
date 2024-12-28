@@ -3,6 +3,7 @@ import Icon from '@/components/Icon.vue';
 
 const props = withDefaults(defineProps<{
   title?: string,
+  content?: string,
   subtitle?: string,
   href?: string,
   target?: string,
@@ -18,14 +19,19 @@ const props = withDefaults(defineProps<{
   <section :class="['segment', `segment--${props.format}`]">
     <header v-if="props.title || props.icon" class="segment__header">
       <Icon v-if="props.icon" :type="props.icon" class="segment__icon" />
-      <h2 v-if="props.title && props.href" class="segment__title">
-        <a :href="props.href" :target="props.target">
-          {{props.title}}
-          <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
-          <Icon v-else type="external-link" class="segment__icon" />
-        </a>
-      </h2>
-      <h2 v-if="props.title && !props.href" class="segment__title">{{props.title}}</h2>
+      <div class="segment__header-content">
+        <h2 v-if="props.title && props.href" class="segment__title">
+          <a :href="props.href" :target="props.target">
+            <strong>{{props.title}}</strong>
+            <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
+            <Icon v-else type="external-link" class="segment__icon" />
+          </a>
+        </h2>
+        <h2 v-if="props.title && !props.href" class="segment__title">
+          <strong>{{props.title}}</strong>
+          <span v-if="props.content"> ⎯ {{props.content}}</span>
+        </h2>
+      </div>
       <p v-if="props.subtitle" class="segment__subtitle">{{props.subtitle}}</p>
     </header>
     <div class="segment__content"><slot></slot></div>
@@ -82,13 +88,23 @@ const props = withDefaults(defineProps<{
 
 .segment__title {
   font-size: 0.9375rem;
-  font-weight: 600;
+  font-weight: 350;
+
+  strong {
+    font-weight: 600;
+  }
 }
+
 .segment__subtitle {
   font-size: 0.875rem;
   font-weight: 300;
   flex: 0 0 100%;
   color: var(--gray-500);
+}
+
+.segment__header-content {
+  display: flex;
+  align-items: center;
 }
 
 .segment__content {

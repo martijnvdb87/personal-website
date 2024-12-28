@@ -7,17 +7,17 @@ import Segment from '@/components/Segment.vue';
     <div class="container">
       <section class="columns">
         <div class="columns__column">
-          <Segment title="Microsoft Certificate | Programming in C# (MOC20483)" subtitle="September 2021 – December 2021 | Utrecht, The Netherlands (Hybrid)">
+          <Segment title="Programming in C# (MOC20483)" content="Microsoft Certificate" subtitle="September 2021 – December 2021 | Utrecht, The Netherlands (Hybrid)">
             <ul>
               <li>C# Fundamentals</li>
               <li>C# Object Programming</li>
               <li>C# .NET Developer</li>
             </ul>
           </Segment>
-          <Segment title="LOI | HBO Communication & Multimediadesign" subtitle="2006 – 2012 | Leiderdorp, The Netherlands (Remote) | Did not finish">
+          <Segment title="HBO Communication & Multimediadesign" content="LOI" subtitle="2006 – 2012 | Leiderdorp, The Netherlands (Remote) | Did not finish">
           </Segment>
-          <Segment title="Avans University of Applied Sciences | HBO Informatica" subtitle="2005 – 2006 | ’s-Hertogenbosch, The Netherlands | Did not finish"></Segment>
-          <Segment title="Elde College | HAVO Nature & Technic (+ Informatica)" subtitle="2000 – 2005 | Schijndel, The Netherlands"></Segment>
+          <Segment title="HBO Informatica" content="Avans University of Applied Sciences" subtitle="2005 – 2006 | ’s-Hertogenbosch, The Netherlands | Did not finish"></Segment>
+          <Segment title="HAVO Nature & Technic (+ Informatica)" content="Elde College" subtitle="2000 – 2005 | Schijndel, The Netherlands"></Segment>
         </div>
       </section>
     </div>

@@ -5,17 +5,17 @@ import Link from '@/components/Link.vue';
 
 <template>
   <div class="info">
+    <Segment format="small" title="Email" icon="mail">
+      <Link href="mailto:contact@martijnvandenbosch.com" target="_blank" variant="simple">contact@martijnvandenbosch.com</Link>
+    </Segment>
     <Segment format="small" title="Github" icon="github">
       <Link href="https://github.com/martijnvdb87" target="_blank" variant="simple">https://github.com/martijnvdb87</Link>
-    </Segment>
-    <Segment format="small" title="LinkedIn" icon="linkedin">
-      <Link href="https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190" target="_blank" variant="simple">https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190</Link>
     </Segment>
     <Segment format="small" title="CodePen" icon="codepen">
       <Link href="https://codepen.io/martijnvdb87" target="_blank" variant="simple">https://codepen.io/martijnvdb87</Link>
     </Segment>
-    <Segment format="small" title="Email" icon="mail">
-      <Link href="mailto:martijnvdb87@gmail.com" target="_blank" variant="simple">martijnvdb87@gmail.com</Link>
+    <Segment format="small" title="LinkedIn" icon="linkedin">
+      <Link href="https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190" target="_blank" variant="simple">https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190</Link>
     </Segment>
   </div>
 </template>

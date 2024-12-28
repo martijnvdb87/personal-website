@@ -59,5 +59,12 @@ const validLabel = (label: string): boolean => {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
+  padding-top: 0.5rem;
+
+  &::after {
+    content: '';
+    display: block;
+    flex: 1 0 0;
+  }
 }
 </style>

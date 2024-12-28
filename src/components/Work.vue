@@ -22,7 +22,7 @@ import SegmentLead from './SegmentLead.vue';
           </Segment>
           <Segment title="SkillsTown" subtitle="March 2019 - September 2022 | Lead full-stack developer" href="https://skillstown.com/" target="_blank">
             <ul>
-              <li><SegmentLead>LTI 1.3</SegmentLead> Implemented <Link href="https://en.wikipedia.org/wiki/Learning_Tools_Interoperability" target="_blank">LTI 1.3</Link> which allowed us to contract the biggest customer in the history of the company</li>
+              <li><SegmentLead>Interoperability</SegmentLead> Implemented <Link href="https://en.wikipedia.org/wiki/Learning_Tools_Interoperability" target="_blank">LTI 1.3</Link> which allowed us to contract the biggest customer in the history of the company</li>
               <li><SegmentLead>SAML SSO</SegmentLead> Automated the <Link href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language" target="_blank">SAML SSO</Link> process which reduced the development time from 8 hours to 10 minutes</li>
               <li><SegmentLead>OpenID Connect SSO</SegmentLead> Added <Link href="https://en.wikipedia.org/wiki/OpenID#OpenID_Connect_(OIDC)" target="_blank">OpenID Connect</Link> capability to the platform</li>
               <li><SegmentLead>Frontend</SegmentLead> Rewrote an unstable <Link href="https://svelte.dev/" target="_blank">Svelte</Link> application to a stable <Link href="https://reactjs.org/" target="_blank">React</Link> one</li>

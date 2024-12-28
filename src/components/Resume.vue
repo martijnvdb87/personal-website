@@ -119,7 +119,7 @@ const updateResumeContentScale = (): void => {
 
   hr {
     border: none;
-    border-bottom: 0.0625rem solid var(--gray-400);
+    border-bottom: 0.0625rem solid var(--gray-200);
     margin-top: 0;
     margin-bottom: 1.25rem;
   }
@@ -128,7 +128,7 @@ const updateResumeContentScale = (): void => {
     margin-bottom: 1.5rem;
 
     .segment__header {
-      margin-bottom: 0.125rem;
+      margin-bottom: 0.25rem;
     }
 
     ul {
@@ -178,7 +178,7 @@ const updateResumeContentScale = (): void => {
   }
 
   .introduction {
-    margin-bottom: 2rem;
+    margin-bottom: 0rem;
 
     .segment__header {
       display: none;
@@ -192,11 +192,13 @@ const updateResumeContentScale = (): void => {
 
   .info {
     column-count: 2;
-    gap: 0 3rem;
+    gap: 0rem;
     margin-bottom: 1rem;
 
     .segment {
-      margin-bottom: 1rem;
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 0.125rem;
     }
 
     .segment__icon {
@@ -221,8 +223,12 @@ const updateResumeContentScale = (): void => {
   }
 
   .work {
-    .segment__header .segment__subtitle {
-      flex: auto;
+    .segment__header {
+      margin-bottom: 0.5rem;
+
+      .segment__subtitle {
+        flex: auto;
+      }
     }
   }
 
