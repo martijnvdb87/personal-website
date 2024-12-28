@@ -6,7 +6,10 @@ import Segment from '@/components/Segment.vue';
   <div class="introduction">
     <Segment title="Introduction" icon="user">
       <p>
-        Self-taught full-stack developer from the Netherlands with more than 25 years of experience in web development. Specialised in Javascript / Typescript and PHP and SQL.
+        Self-taught full-stack developer from the Netherlands with over 25 years of experience in web development.
+        Specialized in front-end and back-end development, building scalable and maintainable applications using JavaScript/TypeScript, PHP, and SQL.
+        Passionate about leveraging technology to solve real-world problems. Focusing on practical solutions with a keen eye for detail.
+        Constantly working on personal projects.
       </p>
     </Segment>
   </div>

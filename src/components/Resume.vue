@@ -113,7 +113,7 @@ const updateResumeContentScale = (): void => {
   h3 {
     font-weight: 300;
     margin-bottom: 1rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 1.2;
   }
 
@@ -125,7 +125,7 @@ const updateResumeContentScale = (): void => {
   }
 
   .segment {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 
     .segment__header {
       margin-bottom: 0.25rem;
