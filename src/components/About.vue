@@ -13,10 +13,7 @@ import Introduction from '@/components/Introduction.vue';
         <div class="columns__column">
           <Introduction />
           <Segment title="Work" icon="briefcase">
-            <p>I have just started working as senior full-stack developer at <Link href="https://www.ksyos.nl/" target="_blank">Ksyos</Link> based in Amsterdam. We are working with the Node.js, React and SQL techstack.</p>
-          </Segment>
-          <Segment title="Free time" icon="smile">
-            <p>Besides watching series on Netflix and spending time with my wife, I like working on multiple <Link href="/projects/">personal projects</Link>.</p>
+            <p>I'm currently working as senior full-stack developer at <Link href="https://www.ksyos.nl/" target="_blank">Ksyos</Link> based in Amsterdam. We are working with the Node.js, React, Typescript and PostgreSQL techstack.</p>
           </Segment>
           <Segment title="Skills" icon="code">
             <Skills show-all />
