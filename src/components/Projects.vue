@@ -15,7 +15,7 @@ import { Skill } from '@/enums/skill';
             <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Html, Skill.Css, Skill.RestApi, Skill.Git, Skill.Wordpress ]" />
           </Segment>
     
-          <Segment title="OhMyBrush" href="https://ohmybrush.com/" target="_blank">
+          <Segment title="OhMyBrush" href="https://web.archive.org/web/20231225223229/https://ohmybrush.com/" target="_blank">
             <p><Link href="https://ohmybrush.com/" target="_blank">OhMyBrush</Link> is a Hungarian beauty blog which won the Cosmopolitan beauty blog of the year award in 2016. The Wordpress website used multiple themes over the years all desiged and developed by me. In 2014 it got nominated as best designed blog by Cosmopolitan.</p>
             <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Html, Skill.Css, Skill.Git, Skill.Wordpress]" />
           </Segment>
