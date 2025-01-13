@@ -20,16 +20,29 @@ const props = withDefaults(defineProps<{
     <header v-if="props.title || props.icon" class="segment__header">
       <Icon v-if="props.icon" :type="props.icon" class="segment__icon" />
       <div class="segment__header-content">
-        <h2 v-if="props.title && props.href" class="segment__title">
-          <a :href="props.href" :target="props.target">
-            <strong>{{props.title}}</strong>
+        <h2 v-if="props.title && !props.href && props.content" class="segment__title">
+          <strong>{{props.title}}</strong>
+          <span v-if="props.content"> ⎯ {{props.content}}</span>
+        </h2>
+        <h2 v-else-if="props.title && props.href && props.content" class="segment__title">
+          <strong>{{props.title}}</strong>
+            <span v-if="props.content"> ⎯ </span>
+            <a :href="props.href" :target="props.target">
+              {{props.content}}
             <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
             <Icon v-else type="external-link" class="segment__icon" />
           </a>
         </h2>
-        <h2 v-if="props.title && !props.href" class="segment__title">
-          <strong>{{props.title}}</strong>
-          <span v-if="props.content"> ⎯ {{props.content}}</span>
+        <h2 v-else-if="props.href" class="segment__title">
+          <a :href="props.href" :target="props.target">
+            <strong>{{props.title}}</strong>
+            <span>&nbsp;</span>
+            <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
+            <Icon v-else type="external-link" class="segment__icon" />
+          </a>
+        </h2>
+        <h2 v-else class="segment__title">
+            <strong>{{props.title}}</strong>
         </h2>
       </div>
       <p v-if="props.subtitle" class="segment__subtitle">{{props.subtitle}}</p>
