@@ -10,13 +10,13 @@ import { Skill } from '@/enums/skill';
     <div class="container">
       <section class="columns">
         <div class="columns__column">
-          <Segment title="Hungarian365" href="https://www.hungarian365.com/" target="_blank">
-            <p>A Wordpress website focused on teaching the Hungarian language. <Link href="https://www.hungarian365.com/" target="_blank">Hungarian365</Link> uses a theme designed and developed from scratch.</p>
-            <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Html, Skill.Css, Skill.RestApi, Skill.Git, Skill.Wordpress ]" />
+          <Segment title="Type Vault" href="https://github.com/martijnvdb87/type-vault" target="_blank">
+            <p>Type Vault is a TypeScript utility package that provides robust and validated types for common structured values like UUIDs, URLs, ISO date-times, hex colors, and more. It helps enforce correctness at runtime while maintaining strong typing at compile time. It is originally written in <Link href="https://github.com/martijnvdb87/type-vault" target="_blank">TypeScript</Link>, but it also has a <Link href="https://github.com/martijnvdb87/type-vault-php" target="_blank">PHP</Link> equivalent.</p>
+            <Skills :labels="[Skill.Typescript, Skill.Php, Skill.Git]" />
           </Segment>
     
-          <Segment title="OhMyBrush" href="https://web.archive.org/web/20231225223229/https://ohmybrush.com/" target="_blank">
-            <p><Link href="https://ohmybrush.com/" target="_blank">OhMyBrush</Link> is a Hungarian beauty blog which won the Cosmopolitan beauty blog of the year award in 2016. The Wordpress website used multiple themes over the years all desiged and developed by me. In 2014 it got nominated as best designed blog by Cosmopolitan.</p>
+          <Segment title="OhMyBrush">
+            <p>OhMyBrush is a Hungarian beauty blog which won the Cosmopolitan beauty blog of the year award in 2016. The Wordpress website used multiple themes over the years all desiged and developed by me. In 2014 it got nominated as best designed blog by Cosmopolitan.</p>
             <Skills :labels="[Skill.Php, Skill.Javascript, Skill.Html, Skill.Css, Skill.Git, Skill.Wordpress]" />
           </Segment>
     
