@@ -20,7 +20,7 @@ import { Skill } from '@/enums/skill';
             </ul>
             <Skills :labels="[Skill.Javascript, Skill.Typescript, Skill.Sql, Skill.PostgreSQL, Skill.Html, Skill.Css, Skill.React, Skill.RestApi, Skill.Saml, Skill.Git, Skill.Fhir]" />
           </Segment>
-          <Segment title="Lead full-stack developer" content="SkillsTown" subtitle="March 2019 - September 2022" href="https://skillstown.com/" target="_blank">
+          <Segment title="Senior full-stack developer / Software architect" content="SkillsTown" subtitle="March 2019 - September 2022" href="https://skillstown.com/" target="_blank">
             <ul>
               <li><SegmentLead>Interoperability</SegmentLead> Implemented <Link href="https://en.wikipedia.org/wiki/Learning_Tools_Interoperability" target="_blank">LTI 1.3</Link> which allowed us to contract the biggest customer in the history of the company</li>
               <li><SegmentLead>SAML SSO</SegmentLead> Automated the <Link href="https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language" target="_blank">SAML SSO</Link> process which reduced the development time from 8 hours to 10 minutes</li>
