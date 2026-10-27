@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, Ref } from 'vue';
-import Profile from '@/components/Profile.vue';
-import Skills from '@/components/Skills.vue';
-import Work from '@/components/Work.vue';
-import Education from '@/components/Education.vue';
-import Info from '@/components/Info.vue';
-import QrCode from '@/components/QrCode.vue';
-import Introduction from '@/components/Introduction.vue';
+import { ref, onMounted, onUnmounted, Ref, h } from "vue";
+import Profile from "@/components/Profile.vue";
+import Skills from "@/components/Skills.vue";
+import Work from "@/components/Work.vue";
+import Education from "@/components/Education.vue";
+import Info from "@/components/Info.vue";
+import QrCode from "@/components/QrCode.vue";
+import Introduction from "@/components/Introduction.vue";
 
 const resume: Ref<HTMLElement | undefined> = ref();
 const resumeDocument: Ref<HTMLElement | undefined> = ref();
@@ -14,35 +14,45 @@ const resumeDocument: Ref<HTMLElement | undefined> = ref();
 onMounted((): void => {
   updateResumeContentScale();
 
-  window.addEventListener('resize', updateResumeContentScale);
+  window.addEventListener("resize", updateResumeContentScale);
 });
 
 onUnmounted((): void => {
-  window.removeEventListener('resize', updateResumeContentScale);
+  window.removeEventListener("resize", updateResumeContentScale);
 });
 
 let updateResumeContentScaleTimeout: number = 0;
 
 const updateResumeContentScale = (): void => {
-	if(updateResumeContentScaleTimeout) {
-		window.cancelAnimationFrame(updateResumeContentScaleTimeout);
-	}
+  if (updateResumeContentScaleTimeout) {
+    window.cancelAnimationFrame(updateResumeContentScaleTimeout);
+  }
 
   updateResumeContentScaleTimeout = window.requestAnimationFrame(() => {
-    if(!(resume.value instanceof HTMLElement && resumeDocument.value instanceof HTMLElement)) {
+    if (
+      !(
+        resume.value instanceof HTMLElement &&
+        resumeDocument.value instanceof HTMLElement
+      )
+    ) {
       return;
     }
 
-    const resumeWidth = getComputedStyle(resume.value).getPropertyValue('--resume-full-width');
-  
-    const divTemplate = document.createElement('div');
+    const resumeWidth = getComputedStyle(resume.value).getPropertyValue(
+      "--resume-full-width",
+    );
+
+    const divTemplate = document.createElement("div");
     divTemplate.style.width = resumeWidth;
     document.body.append(divTemplate);
-  
+
     const originalWidth = divTemplate.offsetWidth;
     divTemplate.remove();
-  
-    resume.value.style.setProperty('--resume-content-scale', `${resumeDocument.value.offsetWidth / originalWidth}`);
+
+    resume.value.style.setProperty(
+      "--resume-content-scale",
+      `${resumeDocument.value.offsetWidth / originalWidth}`,
+    );
   });
 };
 </script>
@@ -55,16 +65,13 @@ const updateResumeContentScale = (): void => {
           <Profile />
           <QrCode />
           <Info />
-          <hr>
           <Introduction />
-          <hr>
+          <hr />
           <h3>Work experience</h3>
           <Work />
-          <hr>
+          <hr />
           <h3>Education</h3>
           <Education />
-          <hr>
-          <Skills show-all />
         </div>
       </div>
     </div>
@@ -107,12 +114,12 @@ const updateResumeContentScale = (): void => {
   }
 
   .resume__document-content-padding {
-    padding: 4rem;
+    padding: 3.5rem 4rem;
   }
 
   h3 {
     font-weight: 300;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
     font-size: 1.25rem;
     line-height: 1.2;
   }
@@ -121,11 +128,12 @@ const updateResumeContentScale = (): void => {
     border: none;
     border-bottom: 0.0625rem solid var(--gray-200);
     margin-top: 0;
+    margin-top: -0.5rem;
     margin-bottom: 1.25rem;
   }
 
   .segment {
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
 
     .segment__header {
       margin-bottom: 0.25rem;
@@ -156,7 +164,7 @@ const updateResumeContentScale = (): void => {
   .profile {
     padding: 0;
     height: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 
     .download-resume {
       display: none;
@@ -186,7 +194,7 @@ const updateResumeContentScale = (): void => {
 
     p {
       font-size: 0.9375rem;
-      margin-bottom: 1rem;
+      margin-bottom: 0rem;
     }
   }
 
@@ -199,6 +207,7 @@ const updateResumeContentScale = (): void => {
       display: flex;
       gap: 0.5rem;
       margin-bottom: 0.125rem;
+      align-items: baseline;
     }
 
     .segment__icon {
@@ -213,10 +222,6 @@ const updateResumeContentScale = (): void => {
       max-width: none;
     }
 
-    .skills {
-      display: none;
-    }
-
     .segment__icon {
       display: none;
     }
@@ -224,7 +229,8 @@ const updateResumeContentScale = (): void => {
 
   .work {
     .segment__header {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.375rem;
+      align-items: baseline;
 
       .segment__subtitle {
         flex: auto;
@@ -239,10 +245,14 @@ const updateResumeContentScale = (): void => {
     .columns__column {
       column-count: 2;
     }
+
+    .segment {
+      margin-bottom: 1rem;
+    }
   }
 
   .skills {
-    justify-content: space-between;
+    padding-top: 0px;
   }
 }
 </style>

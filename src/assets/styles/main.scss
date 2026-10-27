@@ -7,13 +7,13 @@
 }
 
 @page {
-  size: 210mm 297mm; 
+  size: 210mm 297mm;
   /* Chrome sets own margins, we change these printer settings */
-  margin: 0mm; 
+  margin: 0mm;
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   font-size: 1.0625rem;
   color: var(--gray-700);
   font-weight: 350;
@@ -52,7 +52,7 @@ body {
     padding: 0rem !important;
     box-shadow: none !important;
     background-color: transparent;
-    
+
     .resume__document,
     .resume__document-content {
       aspect-ratio: initial !important;
@@ -70,9 +70,9 @@ body {
   }
 
   .skills {
-    padding-top: 1rem !important;
+    padding-top: 0rem !important;
   }
-  
+
   ::-webkit-scrollbar {
     width: 0rem !important;
   }
@@ -99,7 +99,7 @@ body {
   .container {
     max-width: 74rem;
   }
-  
+
   .columns {
     display: flex;
     gap: 6rem;
@@ -118,11 +118,11 @@ body {
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }
- 
+
 ::-webkit-scrollbar-track {
   background-color: var(--gray-50);
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background-color: var(--gray-200);
   border: 0.0625rem solid var(--gray-50);

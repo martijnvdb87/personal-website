@@ -1,18 +1,21 @@
 <script setup lang="ts">
-import Icon from '@/components/Icon.vue';
+import Icon from "@/components/Icon.vue";
 
-const props = withDefaults(defineProps<{
-  title?: string,
-  content?: string,
-  subtitle?: string,
-  href?: string,
-  target?: string,
-  icon?: string,
-  format?: string,
-}>(), {
-  format: 'medium',
-  target: '_self'
-});
+const props = withDefaults(
+  defineProps<{
+    title?: string;
+    content?: string;
+    subtitle?: string;
+    href?: string;
+    target?: string;
+    icon?: string;
+    format?: string;
+  }>(),
+  {
+    format: "medium",
+    target: "_self",
+  },
+);
 </script>
 
 <template>
@@ -20,32 +23,48 @@ const props = withDefaults(defineProps<{
     <header v-if="props.title || props.icon" class="segment__header">
       <Icon v-if="props.icon" :type="props.icon" class="segment__icon" />
       <div class="segment__header-content">
-        <h2 v-if="props.title && !props.href && props.content" class="segment__title">
-          <strong>{{props.title}}</strong>
-          <span v-if="props.content"> ⎯ {{props.content}}</span>
+        <h2
+          v-if="props.title && !props.href && props.content"
+          class="segment__title"
+        >
+          <strong>{{ props.title }}</strong>
+          <span v-if="props.content"> – {{ props.content }}</span>
         </h2>
-        <h2 v-else-if="props.title && props.href && props.content" class="segment__title">
-          <strong>{{props.title}}</strong>
-            <span v-if="props.content"> ⎯ </span>
-            <a :href="props.href" :target="props.target">
-              {{props.content}}
-            <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
+        <h2
+          v-else-if="props.title && props.href && props.content"
+          class="segment__title"
+        >
+          <strong>{{ props.title }}</strong>
+          <span v-if="props.content"> – </span>
+          <a :href="props.href" :target="props.target">
+            {{ props.content }}
+            <Icon
+              v-if="props.target === '_self'"
+              type="link"
+              class="segment__icon"
+            />
             <Icon v-else type="external-link" class="segment__icon" />
           </a>
         </h2>
         <h2 v-else-if="props.href" class="segment__title">
           <a :href="props.href" :target="props.target">
-            <strong>{{props.title}}</strong>
+            <strong>{{ props.title }}</strong>
             <span>&nbsp;</span>
-            <Icon v-if="props.target === '_self'" type="link" class="segment__icon" />
+            <Icon
+              v-if="props.target === '_self'"
+              type="link"
+              class="segment__icon"
+            />
             <Icon v-else type="external-link" class="segment__icon" />
           </a>
         </h2>
         <h2 v-else class="segment__title">
-            <strong>{{props.title}}</strong>
+          <strong>{{ props.title }}</strong>
         </h2>
       </div>
-      <p v-if="props.subtitle" class="segment__subtitle">{{props.subtitle}}</p>
+      <p v-if="props.subtitle" class="segment__subtitle">
+        {{ props.subtitle }}
+      </p>
     </header>
     <div class="segment__content"><slot></slot></div>
   </section>
@@ -60,8 +79,7 @@ const props = withDefaults(defineProps<{
 .segment__header {
   display: flex;
   flex-wrap: wrap;
-  gap: 0 0.625rem;
-  align-items: center;
+  gap: 0 0.75rem;
   margin-bottom: 0.5rem;
   color: var(--gray-900);
 
@@ -70,7 +88,9 @@ const props = withDefaults(defineProps<{
     text-decoration: none;
     color: var(--gray-900);
     border-radius: 0.125rem;
-    transition: transform ease 160ms, color ease 160ms;
+    transition:
+      transform ease 160ms,
+      color ease 160ms;
 
     svg {
       width: 1rem;
@@ -100,7 +120,7 @@ const props = withDefaults(defineProps<{
 }
 
 .segment__title {
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 350;
 
   strong {

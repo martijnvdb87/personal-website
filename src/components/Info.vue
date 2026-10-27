@@ -1,24 +1,47 @@
 <script setup lang="ts">
-import Segment from '@/components/Segment.vue';
-import Link from '@/components/Link.vue';
+import Segment from "@/components/Segment.vue";
+import Link from "@/components/Link.vue";
 </script>
 
 <template>
   <div class="info">
     <Segment format="small" title="Email" icon="mail">
-      <Link href="mailto:contact@martijnvandenbosch.com" target="_blank" variant="simple">contact@martijnvandenbosch.com</Link>
+      <Link
+        href="mailto:contact@martijnvandenbosch.com"
+        target="_blank"
+        variant="simple"
+        >contact@martijnvandenbosch.com</Link
+      >
     </Segment>
     <Segment format="small" title="Github" icon="github">
-      <Link href="https://github.com/martijnvdb87" target="_blank" variant="simple">https://github.com/martijnvdb87</Link>
+      <Link
+        href="https://github.com/martijnvdb87"
+        target="_blank"
+        variant="simple"
+        >https://github.com/martijnvdb87</Link
+      >
     </Segment>
     <Segment format="small" title="CodePen" icon="codepen">
-      <Link href="https://codepen.io/martijnvdb87" target="_blank" variant="simple">https://codepen.io/martijnvdb87</Link>
+      <Link
+        href="https://codepen.io/martijnvdb87"
+        target="_blank"
+        variant="simple"
+        >https://codepen.io/martijnvdb87</Link
+      >
     </Segment>
     <Segment format="small" title="LinkedIn" icon="linkedin">
-      <Link href="https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190" target="_blank" variant="simple">https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190</Link>
+      <Link
+        href="https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190"
+        target="_blank"
+        variant="simple"
+        >https://www.linkedin.com/in/martijn-van-den-bosch-8a6574190</Link
+      >
     </Segment>
   </div>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
+.info .segment__title {
+  font-size: 0.875rem;
+}
 </style>

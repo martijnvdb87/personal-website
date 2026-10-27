@@ -1,3 +1,3 @@
 <template>
-    <b><slot></slot></b> ⎯ 
+  <b><slot></slot></b> –
 </template>
