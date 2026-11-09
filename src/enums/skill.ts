@@ -6,6 +6,7 @@ export enum Skill {
   React = "React",
   Vue = "Vue",
   Svelte = "Svelte",
+  Astro = "Astro",
   WebComponents = "Web Components",
   ReactNative = "React Native",
   Sql = "SQL",

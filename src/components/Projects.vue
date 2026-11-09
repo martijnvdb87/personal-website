@@ -11,6 +11,28 @@ import { Skill } from "@/enums/skill";
       <section class="columns">
         <div class="columns__column">
           <Segment
+            title="Converting.tools"
+            href="https://converting.tools"
+            target="_blank"
+          >
+            <p>
+              Converting.tools is a free collection of browser-based tools for
+              converting text and structured data. All processing happens
+              locally in your browser, so your content stays on your device. No
+              downloads or account required.
+            </p>
+            <Skills
+              :labels="[
+                Skill.Typescript,
+                Skill.Astro,
+                Skill.WebComponents,
+                Skill.Git,
+                Skill.UnitTesting,
+              ]"
+            />
+          </Segment>
+
+          <Segment
             title="Type Vault"
             href="https://github.com/martijnvdb87/type-vault"
             target="_blank"
